@@ -1,4 +1,38 @@
+header{
+  width: 100%;
+  border-bottom: 2px dashed @navigation-border;
+
+  .innerHead{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .title{
+      width: 49%;
+
+      @media @phone {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media @phone {
+      flex-direction: column;
+    }
+  }
+}
+
 .home {
+
+  .textBlock{
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 2px dashed @navigation-border;
+  }
 
   .content-section {
     margin: 30px 0;
@@ -11,6 +45,11 @@
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @phone {
+        width: 100%;
+        padding: 0;
+      }
     }
 
     .img-content {
@@ -20,6 +59,16 @@
       img {
         border-radius: 10px;
       }
+
+      @media @phone {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    @media @phone {
+      flex-direction: column;
+      width: 100%;
     }
   }
 
@@ -30,11 +79,25 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @phone {
+        width: 100%;
+        padding: 0;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @phone {
+        min-width: 100%;
+        padding: 0;
+      }
+    }
+
+    @media @phone {
+      flex-direction: column-reverse;
     }
   }
 
@@ -44,6 +107,10 @@
 
     img {
       border-radius: 10px;
+    }
+
+    @media @phone {
+      width: 100%;
     }
   }
 
@@ -56,6 +123,29 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn{
+        .bottomButton(80%; @bBlue; 10px; white; 1.9rem);
+        text-align: center;
+        border: 1px solid grey;
+        border-radius: 15px;
+
+        @media @phone {
+          width: 100%;
+        }
+      }
+
+      @media @phone {
+        width: 80%;
+      }
+    }
+
+    @media @phone {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
     }
   }
 }// home
+
+
